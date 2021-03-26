@@ -1,5 +1,5 @@
 module.exports = (application) => {
     application.get('/', (req, res) => {
-        res.send('teste');
-    })
+        application.app.controllers.index.home(application, req, res);
+    });
 }
